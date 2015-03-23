@@ -6,6 +6,8 @@ public class Turn {
 		PWMPin s = GPIOLib.allocatePWM( 17 );
 		s.setDuty( 0.015 );
 		Thread.sleep( 1000 );
+		s.setDuty( 0.0225 );
+		Thread.sleep( 1000 );
 	}catch(Exception e){
 		e.printStackTrace( System.err );
 	}finally{
