@@ -9,7 +9,7 @@ class MotorTest {
 		GPIOPin b = GPIOLib.allocateGPIO( 27 );
 
 		pwm.setDuty( 0 );
-		a.setValue( 1 );
+		a.setValue( true );
 		b.setDirection( GPIOPinDirection.IN );
 		System.out.println( "Starting state: 0 pwm, a on, b off" );
 
