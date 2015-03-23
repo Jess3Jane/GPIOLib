@@ -9,6 +9,7 @@ public class Blink {
 		p.setValue(false);
 	}catch( Exception e ){
 		e.printStackTrace( System.err );
+	}finally{
 		GPIOLib.cleanup();
 	}
 	}
