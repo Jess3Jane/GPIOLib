@@ -26,7 +26,7 @@ public class PWMPin extends GPIO {
 
 		//No real exporting needed here, we just write it to zero to ensure that it's allocated to pi-blaster
 		try{
-			PWMFile.write( (pin + "=0").getBytes() );
+			PWMFile.write( (pin + "=0\n").getBytes() );
 		}catch( Exception e ){
 			throw new PinWriteException( pin );
 		}
@@ -50,7 +50,7 @@ public class PWMPin extends GPIO {
 
 		//Release the pin
 		try{
-			PWMFile.write( ("release " + exportedPin).getBytes() );
+			PWMFile.write( ("release " + exportedPin +"\n").getBytes() );
 		}catch( Exception e ){
 			throw new PinWriteException( exportedPin );
 		}
@@ -74,6 +74,6 @@ public class PWMPin extends GPIO {
 
 		System.out.println((exportedPin + "=" + duty));
 		//Write to the file
-		try{ PWMFile.write( (exportedPin + "=" + duty).getBytes() ); }catch( Exception e ){e.printStackTrace();}
+		try{ PWMFile.write( (exportedPin + "=" + duty + "\n").getBytes() ); }catch( Exception e ){e.printStackTrace();}
 	}
 }
