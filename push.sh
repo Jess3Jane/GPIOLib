@@ -1,3 +1,3 @@
 #!/bin/bash
-echo Attemtping to bush to repo
+echo Attemtping to push to repo
 git push origin master

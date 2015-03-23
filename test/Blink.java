@@ -8,6 +8,7 @@ public class Blink {
 		Thread.sleep(1000);
 		p.setValue(false);
 	}catch( Exception e ){
+		e.printStackTrace( System.err );
 		GPIOLib.cleanup();
 	}
 	}
