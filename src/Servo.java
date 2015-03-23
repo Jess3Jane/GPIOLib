@@ -1,5 +1,5 @@
 package com.cubethree.GPIOLib;
-class Servo extends PWMPin {
+public class Servo extends PWMPin {
 	public double minMs, maxMs, minAngle, maxAngle;
 
 	public Servo(){
