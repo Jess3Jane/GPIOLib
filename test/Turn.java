@@ -6,9 +6,9 @@ public class Turn {
 		Servo s = GPIOLib.allocateServo( 17 );
 		s.setAngle( -90 );
 		Thread.sleep( 1000 );
-		for( double a = -90; a < 90; a += 5 ){
+		for( double a = -90; a < 90; ++a ){
 			s.setAngle( a );			
-			Thread.sleep(100);
+			Thread.sleep(50);
 		}
 	}catch(Exception e){
 		e.printStackTrace( System.err );
