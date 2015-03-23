@@ -69,10 +69,10 @@ public class PWMPin extends GPIO {
 
 		//Make sure the file is open
 		if( PWMFile == null ){
-			try{ PWMFile = new FileOutputStream( new File( "/dev/pi-blaster" ) ); }catch( Exception e ){return;}
+			try{ PWMFile = new FileOutputStream( new File( "/dev/pi-blaster" ) ); }catch( Exception e ){e.printStackTrace(); return;}
 		}
 
 		//Write to the file
-		try{ PWMFile.write( (exportedPin + "=" + duty).getBytes() ); }catch( Exception e ){;}
+		try{ PWMFile.write( (exportedPin + "=" + duty).getBytes() ); }catch( Exception e ){e.printStackTrace();}
 	}
 }
