@@ -1,10 +1,11 @@
 #!/bin/bash
 echo Removing temp files
-rm -f ./src/~*.java
-rm -f ./test/~*.java
+rm -f ./src/*~
+rm -f ./test/*~
+rm -f ./*~
 
 echo Staging changes
-git add .
+git add -A
 
 echo Printing status
 git status
