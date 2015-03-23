@@ -78,9 +78,9 @@ public class GPIOPin extends GPIO {
 	}
 
 	protected void cleanup(){
-		try{ unexport(); }catch( Exception e ){System.err.println("Could not unexport");}
-		try{ directionFile.close(); }catch( Exception e ){System.err.println("Could not close direction file");}
-		try{ valueFile.close(); }catch( Exception e ){System.err.println("Could not close value file");}
+		try{ unexport(); }catch( Exception e ){;}
+		try{ directionFile.close(); }catch( Exception e ){;}
+		try{ valueFile.close(); }catch( Exception e ){;}
 	}
 
 	protected static void staticCleanup(){
