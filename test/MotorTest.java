@@ -1,5 +1,5 @@
 import com.cubethree.GPIOLib.*;
-import java.io.Scanner;
+import java.util.Scanner;
 
 class MotorTest {
 	public static void main( String args[] ){
@@ -20,11 +20,11 @@ class MotorTest {
 			if( parts[0].equals( "quit" ) ){ return; }
 			else if( parts[0].equals( "pwm" ) ){ pwm.setDuty( Double.parseDouble( parts[1] ) ); }
 			else if( parts[0].equals( "a" ) ){
-				if( parts[1].equals( "on" ) ){ a.setDirection( GPIOPinDirection.out ); a.setValue( true ); }
-				else{ a.setDirection( GPIOPinDirection.in ); }
+				if( parts[1].equals( "on" ) ){ a.setDirection( GPIOPinDirection.OUT ); a.setValue( true ); }
+				else{ a.setDirection( GPIOPinDirection.IN ); }
 			}else if( parts[0].equals( "b" ) ){
-				if( parts[1].equals( "on" ) ){ b.setDirection( GPIOPinDirection.out ); b.setValue( true ); }
-				else{ b.setDirection( GPIOPinDirection.in ); }
+				if( parts[1].equals( "on" ) ){ b.setDirection( GPIOPinDirection.OUT ); b.setValue( true ); }
+				else{ b.setDirection( GPIOPinDirection.IN ); }
 			}
 		}
 	}catch( Exception e ){
