@@ -2,7 +2,7 @@ package com.cubethree.GPIOLib;
 import java.io.File;
 import java.io.FileOutputStream;
 
-class PWMPin extends GPIO {
+public class PWMPin extends GPIO {
 	public static final double TIME_PER_CYCLE = 10;
 	private static FileOutputStream PWMFile;
 
