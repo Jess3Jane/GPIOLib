@@ -15,6 +15,7 @@ class MotorTest {
 		pwm.setDuty( 0 );
 		a.setValue( true );
 		b.setDirection( GPIOPinDirection.IN );
+		System.out.format( "Current Value: A=%b B=%b PWM=%f\n", aValue, bValue, pwmValue );
 
 		Scanner s = new Scanner( System.in );
 		String line;
@@ -29,7 +30,7 @@ class MotorTest {
 				if( parts[1].equals( "on" ) ){ b.setDirection( GPIOPinDirection.OUT ); b.setValue( true ); bValue = true; }
 				else{ b.setDirection( GPIOPinDirection.IN ); bValue = false; }
 			}
-			System.out.format( "Current Value: A=%b B=%b PWM=%f", aValue, bValue, pwmValue );
+			System.out.format( "Current Value: A=%b B=%b PWM=%f\n", aValue, bValue, pwmValue );
 		}
 	}catch( Exception e ){
 		e.printStackTrace();
