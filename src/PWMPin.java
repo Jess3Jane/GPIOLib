@@ -72,6 +72,7 @@ public class PWMPin extends GPIO {
 			try{ PWMFile = new FileOutputStream( new File( "/dev/pi-blaster" ) ); }catch( Exception e ){e.printStackTrace(); return;}
 		}
 
+		System.out.println((exportedPin + "=" + duty));
 		//Write to the file
 		try{ PWMFile.write( (exportedPin + "=" + duty).getBytes() ); }catch( Exception e ){e.printStackTrace();}
 	}
