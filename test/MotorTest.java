@@ -24,11 +24,11 @@ class MotorTest {
 			if( parts[0].equals( "quit" ) ){ return; }
 			else if( parts[0].equals( "pwm" ) ){ pwm.setDuty( (pwmValue = Double.parseDouble( parts[1] )) ); }
 			else if( parts[0].equals( "a" ) ){
-				if( parts[1].equals( "on" ) ){ a.setDirection( GPIOPinDirection.OUT ); a.setValue( true ); aValue = true; }
-				else{ a.setDirection( GPIOPinDirection.IN ); aValue = false; }
+				if( parts[1].equals( "on" ) ){ a.setValue( true ); aValue = true; }
+				else{ a.setValue( false ); aValue = false; }
 			}else if( parts[0].equals( "b" ) ){
-				if( parts[1].equals( "on" ) ){ b.setDirection( GPIOPinDirection.OUT ); b.setValue( true ); bValue = true; }
-				else{ b.setDirection( GPIOPinDirection.IN ); bValue = false; }
+				if( parts[1].equals( "on" ) ){b.setValue( true ); bValue = true; }
+				else{ b.setValue( false ); bValue = false; }
 			}
 			System.out.format( "Current Value: A=%b B=%b PWM=%f\n", aValue, bValue, pwmValue );
 		}
