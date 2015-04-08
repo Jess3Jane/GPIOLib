@@ -14,7 +14,7 @@ class MotorTest {
 
 		pwm.setDuty( 0 );
 		a.setValue( true );
-		b.setDirection( GPIOPinDirection.IN );
+		b.setDirection( GPIOPinDirection.OUT );
 		System.out.format( "Current Value: A=%b B=%b PWM=%f\n", aValue, bValue, pwmValue );
 
 		Scanner s = new Scanner( System.in );
