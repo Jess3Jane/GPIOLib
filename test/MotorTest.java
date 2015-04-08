@@ -8,13 +8,15 @@ class MotorTest {
 		GPIOPin a = GPIOLib.allocateGPIO( 22 );
 		GPIOPin b = GPIOLib.allocateGPIO( 21 );
 
-		boolean aValue = true;
+		boolean aValue = false;
 		boolean bValue = false;
 		double pwmValue = 0;
 
 		pwm.setDuty( 0 );
-		a.setValue( true );
+		a.setDirection( GPIOPinDirection.OUT );
 		b.setDirection( GPIOPinDirection.OUT );
+		a.setValue( false );
+		b.setValue( false );
 		System.out.format( "Current Value: A=%b B=%b PWM=%f\n", aValue, bValue, pwmValue );
 
 		Scanner s = new Scanner( System.in );
