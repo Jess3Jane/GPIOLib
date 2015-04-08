@@ -6,7 +6,7 @@ class MotorTest {
 	try{
 		PWMPin pwm = GPIOLib.allocatePWM( 17 );
 		GPIOPin a = GPIOLib.allocateGPIO( 22 );
-		GPIOPin b = GPIOLib.allocateGPIO( 27 );
+		GPIOPin b = GPIOLib.allocateGPIO( 21 );
 
 		boolean aValue = true;
 		boolean bValue = false;
