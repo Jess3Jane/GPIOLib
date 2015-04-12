@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class GPIOLib {
 
-	public final static int[] VALID_PINS = { 4, 17, 18, 21, 22, 23, 24, 25 };
+	public final static int[] VALID_PINS = { 4, 17, 18, 27, 22, 23, 24, 25 };
 
 	private static ArrayList<GPIOContainer> allocatedPins;
 	private static boolean initalized = false;
