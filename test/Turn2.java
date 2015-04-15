@@ -2,9 +2,9 @@ import com.cubethree.GPIOLib.*;
 import java.util.Scanner;
 
 public class Turn2 {
-	public static double high = 2.5;
-	public static double mid = 2;
-	public static double low = 1.5;
+	public static double high = 2.5/PWMPin.TIME_PER_CYCLE;
+	public static double mid = 2/PWMPin.TIME_PER_CYCLE;
+	public static double low = 1.5/PWMPin.TIME_PER_CYCLE;
 
 	public static double bindToRange( double min, double value, double max ){ return Math.max( min, Math.min( max, value ) ); }
 
