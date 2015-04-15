@@ -21,7 +21,7 @@ public class Turn2 {
 			String parts[] = line.split(" ");
 			if( parts[0].equals( "quit" ) ){ break; }
 			else if( parts[0].equals( "pwm" ) ){
-				pwm.setDuty( bindToRange( low, (duty = Double.parseDouble( parts[1] )), high );
+				pwm.setDuty( bindToRange( low, (duty = Double.parseDouble( parts[1] )), high ));
 			}
 			System.out.format( "Current Value: PWM=%f\n", duty );
 		}
