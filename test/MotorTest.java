@@ -23,7 +23,7 @@ class MotorTest {
 		String line;
 		while((line = s.nextLine()) != null){
 			String parts[] = line.split(" ");
-			if( parts[0].equals( "quit" ) ){ return; }
+			if( parts[0].equals( "quit" ) ){ break; }
 			else if( parts[0].equals( "pwm" ) ){ pwm.setDuty( (pwmValue = Double.parseDouble( parts[1] )) ); }
 			else if( parts[0].equals( "a" ) ){
 				if( parts[1].equals( "on" ) ){ a.setValue( true ); aValue = true; }
